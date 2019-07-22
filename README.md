@@ -2,4 +2,3 @@
 
 散落在各地的12班班众，大家一起努力鸭
 
-set boundary for map
