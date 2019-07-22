@@ -3,7 +3,7 @@
 
 <head>
     <!-- responsive web design -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta charset="UTF-8">
 
     <!-- leafletJS CDN -->
@@ -42,7 +42,8 @@
         }();
 
         if (os.isAndroid || os.isPhone || os.isTablet) {
-            document.body.style.cssText ="padding:0px;margin=0px;"
+            // document.body.style.cssText ="padding:0px;margin=0px;"
+            document.getElementsByTagName("html")[0].style.height="100%"
             document.body.style.cssText ="height:100%;width=100vw;"
             document.getElementById("map").style.cssText = "height:100%;width=100vw;"
         } else if (os.isPc) {
