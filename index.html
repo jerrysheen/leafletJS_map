@@ -4,29 +4,52 @@
 <head>
     <!-- responsive web design -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
 
     <!-- leafletJS CDN -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
-    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-    crossorigin="" />
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" />
+
     <!-- Make sure you put this AFTER Leaflet's CSS -->
     <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
         integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
         crossorigin=""></script>
-    <style></style>
 
-    <!-- different css loading -->
-    <link rel="stylesheet" type="text/css"
-　　　　media="screen and (max-device-width: 600px)"
-　　　　href="mobile.css" />
-    <link rel="stylesheet" type="text/css"
-　　　　media="screen and (min-device-width: 800px)"
-　　　　href="computer.css" />
+
 </head>
 <div id="map"></div>
 
 <body>
     <script>
+        console.log(navigator.userAgent);
+        var os = function () {
+            var ua = navigator.userAgent,
+                isWindowsPhone = /(?:Windows Phone)/.test(ua),
+                isSymbian = /(?:SymbianOS)/.test(ua) || isWindowsPhone,
+                isAndroid = /(?:Android)/.test(ua),
+                isFireFox = /(?:Firefox)/.test(ua),
+                isChrome = /(?:Chrome|CriOS)/.test(ua),
+                isTablet = /(?:iPad|PlayBook)/.test(ua) || (isAndroid && !/(?:Mobile)/.test(ua)) || (isFireFox && /(?:Tablet)/.test(ua)),
+                isPhone = /(?:iPhone)/.test(ua) && !isTablet,
+                isPc = !isPhone && !isAndroid && !isSymbian;
+            return {
+                isTablet: isTablet,
+                isPhone: isPhone,
+                isAndroid: isAndroid,
+                isPc: isPc
+            };
+        }();
+
+        if (os.isAndroid || os.isPhone || os.isTablet) {
+            document.body.style.cssText ="padding:0px;margin=0px;"
+            document.body.style.cssText ="height:100%;width=100vw;"
+            document.getElementById("map").style.cssText = "height:100%;width=100vw;"
+        } else if (os.isPc) {
+            document.getElementById("map").style.cssText = "height:650px;"
+            
+        }
+
         const data = [
             {
                 name: "tongwentao",
