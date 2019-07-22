@@ -25,15 +25,398 @@
 
 <body>
     <script>
+        const data = [
+            {
+                name: "tongwentao",
+                node: {
+                    countryID: "124",
+                    city: "Chicago",
+                    name: "童文韬",
+                    labelContent: "出国留学",
+                    long: -87.34,
+                    lat: 41.39,
+                }
+            },
+            {
+                name: "zhangyiran",
+                node: {
+                    countryID: "826",
+                    city: "Lodon",
+                    name: "张一冉",
+                    labelContent: "出国留学",
+                    long: 0.50,
+                    lat: 51.300
+                }
+            },
+            {
+                name: "zhaowenda",
+                node: {
+                    countryID: "125",
+                    city: "Toronto",
+                    name: "赵闻达",
+                    labelContent: "出国留学",
+                    long: -79.4163,
+                    lat: 43.70011
+                }
+            },
+            {
+                name: "zhuluyao",
+                node: {
+                    countryID: "156",
+                    city: "Hongkong",
+                    name: "朱璐瑶",
+                    labelContent: "出境留学",
+                    long: 114.14,
+                    lat: 22.15
+                }
+            },
+            {
+                name: "zhaoxinyi",
+                node: {
+                    countryID: "124",
+                    city: "NewYork",
+                    name: "赵馨昳",
+                    labelContent: "出国留学",
+                    long: -74.0021,
+                    lat:40.4246
+                }
+            },
+            {
+                name: "tangfangshi",
+                node: {
+                    countryID: "156",
+                    city: "Hangzhou",
+                    name: "汤方实",
+                    labelContent: "国内升学",
+                    long:120.20,
+                    lat:30.21
+                }
+            },
+            {
+                name: "zhujiayu",
+                node: {
+                    countryID: "156",
+                    city: "Tianjin",
+                    name: "朱嘉钰",
+                    labelContent: "就业",
+                    long:117.20,
+                    lat:39.12
+                }
+            },
+            {
+                name: "luojiabei",
+                node: {
+                    countryID: "156",
+                    city: "Shanghai",
+                    name: "罗加贝",
+                    labelContent: "国内升学",
+                    long:121.420304,
+                    lat:31.212366
+                }
+            },
+            {
+                name: "wangyiyang",
+                node: {
+                    countryID: "156",
+                    city: "Xian",
+                    name: "王伊杨",
+                    labelContent: "国内升学",
+                    long:108,
+                    lat:34
+                }
+            },
+            {
+                name: "tangyuan",
+                node: {
+                    countryID: "156",
+                    city: "Hangzhou",
+                    name: "唐元",
+                    labelContent: "就业",
+                    long:120.21,
+                    lat:30.21
+                }
+            },
+            {
+                name: "yekai",
+                node: {
+                    countryID: "156",
+                    city: "Hangzhou",
+                    name: "叶开",
+                    labelContent: "国内升学",
+                    long:120.10,
+                    lat:30.27
+                }
+            },
+            {
+                name: "shentao",
+                node: {
+                    countryID: "124",
+                    city: "LA",
+                    name:"沈涛",
+                    labelContent: "出国留学",
+                    long: -117,
+                    lat: 34
+                }
+            },
+            {
+                name: "dongke",
+                node: {
+                    countryID: "156",
+                    city: "Qingdao",
+                    name:"董珂",
+                    labelContent: "国内升学",
+                    long: 120,
+                    lat: 36
+                }
+            },
+            {
+                name: "yanjiadong",
+                node: {
+                    countryID: "156",
+                    city: "Qingdao",
+                    name:"严加栋",
+                    labelContent: "国内升学",
+                    long: 104,
+                    lat: 31
+                }
+            },
+            {
+                name: "hetianyi",
+                node: {
+                    countryID: "826",
+                    city: "Lodon",
+                    name: "贺天艺",
+                    labelContent: "出国留学",
+                    long: 0.60,
+                    lat: 51.5
+                }
+            },
+            {
+                name: "xuyicheng",
+                node: {
+                    countryID: "156",
+                    city: "Hongkong",
+                    name: "徐艺铖",
+                    labelContent: "出境留学",
+                    long: 114.25,
+                    lat: 22.20
+                }
+            },
+            {
+                name: "shikunyi",
+                node: {
+                    countryID: "124",
+                    city: "Rochester",
+                    name:"史坤一",
+                    labelContent: "出国留学",
+                    long: -77.3641,
+                    lat: 43.1256
+                }
+            },
+            {
+                name: "sunyuejin",
+                node: {
+                    countryID: "156",
+                    city: "Hefei",
+                    name:"孙跃进",
+                    labelContent: "国内升学",
+                    long: 117,
+                    lat: 31.79
+                }
+            },
+            {
+                name: "jinliangfeng",
+                node: {
+                    countryID: "156",
+                    city: "Nanjing",
+                    name:"金梁锋",
+                    labelContent: "国内升学",
+                    long: 118.89,
+                    lat: 31.32
+                }
+            },
+            {
+                name: "xuyudong",
+                node: {
+                    countryID: "156",
+                    city: "Hangzhou",
+                    name: "徐毓东",
+                    labelContent: "国内升学",
+                    long:120.094953,
+                    lat:30.315204
+                }
+            },
+            {
+                name: "wangyifan",
+                node: {
+                    countryID: "156",
+                    city: "Hangzhou",
+                    name: "王逸凡",
+                    labelContent: "准备考浙大医学院",
+                    long:120.095,
+                    lat:30.3153
+                }
+            },
+            {
+                name: "wuxiaofei",
+                node: {
+                    countryID: "124",
+                    city: "Boston",
+                    name:"吴笑菲",
+                    labelContent: "出国留学",
+                    long: -71.05,
+                    lat: 42.19
+                }
+            },
+            {
+                name: "wudanni",
+                node: {
+                    countryID: "156",
+                    city: "Hongkong",
+                    name: "吴丹妮",
+                    labelContent: "出境留学",
+                    long: 114.18,
+                    lat: 22.23
+                }
+            },
+            {
+                name: "zhongkaiwen",
+                node: {
+                    countryID: "124",
+                    city: "Washington D.C.",
+                    name:"钟凯文",
+                    labelContent: "出国留学",
+                    long: -77.02182,
+                    lat: 38.53707
+                }
+            },
+            {
+                name: "renweidong",
+                node: {
+                    countryID: "156",
+                    city: "Shanghai",
+                    name: "任维栋",
+                    labelContent: "国内升学",
+                    long:121.437354,
+                    lat:31.028215
+                }
+            },
+            {
+                name: "jinningjia",
+                node: {
+                    countryID: "124",
+                    city: "Michigan",
+                    name:"金宁嘉",
+                    labelContent: "出国留学",
+                    long: -85,
+                    lat: 44
+                }
+            },
+            {
+                name: "zhuzixuan",
+                node: {
+                    countryID: "036",
+                    city: "Melbourne",
+                    name: "朱子宣",
+                    labelContent: "出国留学",
+                    long:145.2,
+                    lat:-38.2
+                }
+            },
+            {
+                name: "zhouweijia",
+                node: {
+                    countryID: "036",
+                    city: "Melbourne",
+                    name: "周维佳",
+                    labelContent: "出国留学",
+                    long:145,
+                    lat:-38
+                }
+            },
+            {
+                name: "yangjiajie",
+                node: {
+                    countryID: "156",
+                    city: "Shanghai",
+                    name: "杨家杰",
+                    labelContent: "国内升学",
+                    long:121,
+                    lat:31
+                }
+            },
+            {
+                name: "zhuqimin",
+                node: {
+                    countryID: "156",
+                    city: "Shaoxing",
+                    name: "朱琪敏",
+                    labelContent: "就业",
+                    long:120,
+                    lat:30
+                }
+            },
+            {
+                name: "fuyiding",
+                node: {
+                    countryID: "156",
+                    city: "Lanzhou",
+                    name: "傅亦丁",
+                    labelContent: "国内升学",
+                    long:104,
+                    lat:36
+                }
+            },
+            {
+                name: "yujing",
+                node: {
+                    countryID: "156",
+                    city: "Wuhan",
+                    name: "虞敬",
+                    labelContent: "国内升学",
+                    long:114,
+                    lat:30.5
+                }
+            },
+            {
+                name: "chenjianing",
+                node: {
+                    countryID: "156",
+                    city: "Shanghai",
+                    name: "陈嘉宁",
+                    labelContent: "国内升学",
+                    long:121.5198,
+                    lat:31.287477
+                }
+            },
+            {
+                name: "chenyin",
+                node: {
+                    countryID: "158",
+                    city: "Taiwan",
+                    name: "陈垠",
+                    labelContent: "出境留学",
+                    long: 120.5825975,
+                    lat: 23.583234,
+                }
+            }
+            
+        ]
+
+
         var map = L.map('map').setView([51.505, -0.09], 2.0);
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
 
-        L.marker([51.5, -0.09]).addTo(map)
-            .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
-            .openPopup();
+        data.map(person=>{
+            console.log(person.node.lat)
+            L.marker([person.node.lat, person.node.long]).addTo(map)
+            //L.marker([23.583234,120.5825975]).addTo(map)
+            .bindPopup(`${person.node.name},${person.node.labelContent}`)
+            
+        })
 
     </script>
 </body>
