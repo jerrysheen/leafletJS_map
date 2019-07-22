@@ -2,24 +2,20 @@
 <html>
 
 <head>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-        }
-
-        #map {
-            height: 650px;
-            width: 1200px;
-        }
-    </style>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
-        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-        crossorigin="" />
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" />
     <!-- Make sure you put this AFTER Leaflet's CSS -->
     <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
         integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
         crossorigin=""></script>
+    <style></style>
+    <link rel="stylesheet" type="text/css"
+　　　　media="screen and (max-device-width: 600px)"
+　　　　href="mobile.css" />
+    <link rel="stylesheet" type="text/css"
+　　　　media="screen and (min-device-width: 800px)"
+　　　　href="computer.css" />
 </head>
 <div id="map"></div>
 
@@ -78,7 +74,7 @@
                     name: "赵馨昳",
                     labelContent: "出国留学",
                     long: -74.0021,
-                    lat:40.4246
+                    lat: 40.4246
                 }
             },
             {
@@ -88,8 +84,8 @@
                     city: "Hangzhou",
                     name: "汤方实",
                     labelContent: "国内升学",
-                    long:120.20,
-                    lat:30.21
+                    long: 120.20,
+                    lat: 30.21
                 }
             },
             {
@@ -99,8 +95,8 @@
                     city: "Tianjin",
                     name: "朱嘉钰",
                     labelContent: "就业",
-                    long:117.20,
-                    lat:39.12
+                    long: 117.20,
+                    lat: 39.12
                 }
             },
             {
@@ -110,8 +106,8 @@
                     city: "Shanghai",
                     name: "罗加贝",
                     labelContent: "国内升学",
-                    long:121.420304,
-                    lat:31.212366
+                    long: 121.420304,
+                    lat: 31.212366
                 }
             },
             {
@@ -121,8 +117,8 @@
                     city: "Xian",
                     name: "王伊杨",
                     labelContent: "国内升学",
-                    long:108,
-                    lat:34
+                    long: 108,
+                    lat: 34
                 }
             },
             {
@@ -132,8 +128,8 @@
                     city: "Hangzhou",
                     name: "唐元",
                     labelContent: "就业",
-                    long:120.21,
-                    lat:30.21
+                    long: 120.21,
+                    lat: 30.21
                 }
             },
             {
@@ -143,8 +139,8 @@
                     city: "Hangzhou",
                     name: "叶开",
                     labelContent: "国内升学",
-                    long:120.10,
-                    lat:30.27
+                    long: 120.10,
+                    lat: 30.27
                 }
             },
             {
@@ -152,7 +148,7 @@
                 node: {
                     countryID: "124",
                     city: "LA",
-                    name:"沈涛",
+                    name: "沈涛",
                     labelContent: "出国留学",
                     long: -117,
                     lat: 34
@@ -163,7 +159,7 @@
                 node: {
                     countryID: "156",
                     city: "Qingdao",
-                    name:"董珂",
+                    name: "董珂",
                     labelContent: "国内升学",
                     long: 120,
                     lat: 36
@@ -174,7 +170,7 @@
                 node: {
                     countryID: "156",
                     city: "Qingdao",
-                    name:"严加栋",
+                    name: "严加栋",
                     labelContent: "国内升学",
                     long: 104,
                     lat: 31
@@ -207,7 +203,7 @@
                 node: {
                     countryID: "124",
                     city: "Rochester",
-                    name:"史坤一",
+                    name: "史坤一",
                     labelContent: "出国留学",
                     long: -77.3641,
                     lat: 43.1256
@@ -218,7 +214,7 @@
                 node: {
                     countryID: "156",
                     city: "Hefei",
-                    name:"孙跃进",
+                    name: "孙跃进",
                     labelContent: "国内升学",
                     long: 117,
                     lat: 31.79
@@ -229,7 +225,7 @@
                 node: {
                     countryID: "156",
                     city: "Nanjing",
-                    name:"金梁锋",
+                    name: "金梁锋",
                     labelContent: "国内升学",
                     long: 118.89,
                     lat: 31.32
@@ -242,8 +238,8 @@
                     city: "Hangzhou",
                     name: "徐毓东",
                     labelContent: "国内升学",
-                    long:120.094953,
-                    lat:30.315204
+                    long: 120.094953,
+                    lat: 30.315204
                 }
             },
             {
@@ -253,8 +249,8 @@
                     city: "Hangzhou",
                     name: "王逸凡",
                     labelContent: "准备考浙大医学院",
-                    long:120.095,
-                    lat:30.3153
+                    long: 120.095,
+                    lat: 30.3153
                 }
             },
             {
@@ -262,7 +258,7 @@
                 node: {
                     countryID: "124",
                     city: "Boston",
-                    name:"吴笑菲",
+                    name: "吴笑菲",
                     labelContent: "出国留学",
                     long: -71.05,
                     lat: 42.19
@@ -284,7 +280,7 @@
                 node: {
                     countryID: "124",
                     city: "Washington D.C.",
-                    name:"钟凯文",
+                    name: "钟凯文",
                     labelContent: "出国留学",
                     long: -77.02182,
                     lat: 38.53707
@@ -297,8 +293,8 @@
                     city: "Shanghai",
                     name: "任维栋",
                     labelContent: "国内升学",
-                    long:121.437354,
-                    lat:31.028215
+                    long: 121.437354,
+                    lat: 31.028215
                 }
             },
             {
@@ -306,7 +302,7 @@
                 node: {
                     countryID: "124",
                     city: "Michigan",
-                    name:"金宁嘉",
+                    name: "金宁嘉",
                     labelContent: "出国留学",
                     long: -85,
                     lat: 44
@@ -319,8 +315,8 @@
                     city: "Melbourne",
                     name: "朱子宣",
                     labelContent: "出国留学",
-                    long:145.2,
-                    lat:-38.2
+                    long: 145.2,
+                    lat: -38.2
                 }
             },
             {
@@ -330,8 +326,8 @@
                     city: "Melbourne",
                     name: "周维佳",
                     labelContent: "出国留学",
-                    long:145,
-                    lat:-38
+                    long: 145,
+                    lat: -38
                 }
             },
             {
@@ -341,8 +337,8 @@
                     city: "Shanghai",
                     name: "杨家杰",
                     labelContent: "国内升学",
-                    long:121,
-                    lat:31
+                    long: 121,
+                    lat: 31
                 }
             },
             {
@@ -352,8 +348,8 @@
                     city: "Shaoxing",
                     name: "朱琪敏",
                     labelContent: "就业",
-                    long:120,
-                    lat:30
+                    long: 120,
+                    lat: 30
                 }
             },
             {
@@ -363,8 +359,8 @@
                     city: "Lanzhou",
                     name: "傅亦丁",
                     labelContent: "国内升学",
-                    long:104,
-                    lat:36
+                    long: 104,
+                    lat: 36
                 }
             },
             {
@@ -374,8 +370,8 @@
                     city: "Wuhan",
                     name: "虞敬",
                     labelContent: "国内升学",
-                    long:114,
-                    lat:30.5
+                    long: 114,
+                    lat: 30.5
                 }
             },
             {
@@ -385,8 +381,8 @@
                     city: "Shanghai",
                     name: "陈嘉宁",
                     labelContent: "国内升学",
-                    long:121.5198,
-                    lat:31.287477
+                    long: 121.5198,
+                    lat: 31.287477
                 }
             },
             {
@@ -400,22 +396,22 @@
                     lat: 23.583234,
                 }
             }
-            
+
         ]
 
+        console.log(navigator.userAgent);
 
-        var map = L.map('map').setView([51.505, -0.09], 2.0);
+        var map = L.map('map').setView([30, -0.09], 2.0);
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
 
-        data.map(person=>{
-            console.log(person.node.lat)
+        data.map(person => {
             L.marker([person.node.lat, person.node.long]).addTo(map)
-            //L.marker([23.583234,120.5825975]).addTo(map)
-            .bindPopup(`${person.node.name},${person.node.labelContent}`)
-            
+                //L.marker([23.583234,120.5825975]).addTo(map)
+                .bindPopup(`${person.node.name},${person.node.labelContent}`)
+
         })
 
     </script>
