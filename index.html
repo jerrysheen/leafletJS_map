@@ -438,11 +438,11 @@
             center: [51.505, -0.09],
             maxZoom:4.0,
             zoom: 2.0,
-            maxBounds :[
-                [-160,74.300776],
-                [160,-54.985151],
-            ], 
-            maxBoundsViscosity: 1.0
+            // maxBounds :[
+            //     [-360,88.300776],
+            //     [360,-88.985151],
+            // ], 
+            // maxBoundsViscosity: 1
             }
         )
         
@@ -450,13 +450,13 @@
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            , minZoom: 2
+            // , minZoom: 2
             
         }).addTo(map);
 
-        L.DomEvent.on(map, 'click', function (ev) {
-            console.log(L.DomEvent.getMousePosition)
-        });
+        // L.DomEvent.on(map, 'click', function (ev) {
+        //     console.log(L.DomEvent.getMousePosition(ev))
+        // });
 
         data.map(person => {
             L.marker([person.node.lat, person.node.long]).addTo(map)
