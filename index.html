@@ -43,12 +43,12 @@
 
         if (os.isAndroid || os.isPhone || os.isTablet) {
             // document.body.style.cssText ="padding:0px;margin=0px;"
-            document.getElementsByTagName("html")[0].style.height="100%"
-            document.body.style.cssText ="height:100%;width=100vw;"
+            document.getElementsByTagName("html")[0].style.height = "100%"
+            document.body.style.cssText = "height:100%;width=100vw;"
             document.getElementById("map").style.cssText = "height:100%;width=100vw;"
         } else if (os.isPc) {
             document.getElementById("map").style.cssText = "height:650px;"
-            
+
         }
 
         const data = [
@@ -432,10 +432,19 @@
         console.log(navigator.userAgent);
 
         var map = L.map('map').setView([30, -0.09], 2.0);
+        // var p1 = L.point(90,-180)
+        // var p2 = L.point(-90,0)
+        // bounds = L.bounds(p1,p2)
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            , minZoom: 2
+            , maxBoundsViscosity: 1.0
         }).addTo(map);
+
+        L.DomEvent.on(map, 'click', function (ev) {
+            console.log(L.DomEvent.getMousePosition)
+        });
 
         data.map(person => {
             L.marker([person.node.lat, person.node.long]).addTo(map)
